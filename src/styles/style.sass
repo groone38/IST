@@ -1,0 +1,391 @@
+@import mixin
+@import variables
+@import fonts
+
+*
+  padding: 0
+  margin: 0
+  list-style: none
+  text-decoration: none
+  color: black
+  box-sizing: border-box
+
+body
+  font-family: 'Open Sans', sans-serif
+  background: #E5E5E5
+
+.hide
+  display: none !important
+.show
+  display: flex !important
+.active
+  color: #1BC52D
+
+.wrappe
+  max-width: 1200px
+  margin: 0 auto
+  padding: 10px
+
+.header
+  width: 100%
+  @include blockCenter
+  margin-top: 27px
+  margin-bottom: 90px
+
+.block_social
+  @include blockCenter
+.burger
+  display: none
+  position: relative
+.burger_text
+  position: absolute
+  right: 20px
+  top: 0
+  padding: 20px
+  flex-direction: column
+  background-color: white
+  border: 1px solid #1BC52D
+  border-radius: 10px
+.social_number
+  margin-left: 25px
+  @include headerNumber
+
+.social_icon
+  background: #F7F7F7
+  border-radius: 7px
+
+  img
+    margin: 10px
+
+.nav
+  @include blockCenter
+  margin-top: 20px
+
+  a:hover
+    color: green
+
+  .logIn
+    background-color: transparent
+    padding: 10px
+    border: 2px solid #A1B6BD
+    border-radius: 7px
+
+  .cash
+    background: #1D4354
+    border-radius: 7px
+    padding: 10px
+    display: flex
+    align-items: center
+
+.main
+  @include blockCenter
+  position: relative
+
+  .arrow
+    display: flex
+    position: absolute
+    bottom: 0
+    right: 50%
+
+    img
+      @include blockCenter
+      width: 35px
+      height: 35px
+      background-color: #1D4354
+      padding: 10px
+      border-radius: 50px
+
+    .arrow_left
+      transform: rotateY(180deg)
+      margin-right: 10px
+
+.main_sale
+  display: flex
+  align-items: center
+
+  .main_circle
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    width: 38px
+    height: 38px
+    padding-left: 5px
+    border-radius: 50%
+    background-color: #1BC52D
+
+.main_check
+  display: flex
+  align-items: end
+
+  p
+    text-decoration: line-through
+    margin-right: 10px
+
+  h2
+    color: #14A800
+
+.main_btn
+  display: flex
+  border-radius: 7px
+  background: #14A800
+  border-width: 0
+  padding: 10px
+  margin-top: 21px
+  color: white
+
+  img
+    margin-left: 20px
+
+.main_img
+  position: relative
+  img
+    width: 100%
+    border-radius: 25px
+
+  &:before
+    display: block
+    content: ""
+    width: 200px
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    transform: translate(-20%, 0%) skewX(13deg)
+    background: #E5E5E5
+
+.list
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-gap: 40px
+  margin-top: 50px
+  margin-bottom: 90px
+
+.list_block
+  @include blockCenter
+  border-radius: 20px
+  background: #FFFFFF
+  padding: 20px
+
+  .text_bold
+    font-weight: bold
+
+  &:hover
+    border: 3px solid #1BC52D
+
+  .block_arrow
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 28px
+    height: 28px
+    background: #6E8C97
+    border-radius: 50%
+
+.main_list
+  @include blockCenter
+  width: 100%
+  background: rgba(29, 67, 84, 0.06)
+  padding: 60px
+  margin-bottom: 125px
+  :nth-child(1)
+    margin-right: 10px
+
+.product_block
+  display: flex
+  border: 2px solid #FFFFFF
+  border-radius: 30px
+  padding: 31px
+
+  h2
+    margin-bottom: 10px
+
+.popular_goods
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-gap: 51px
+
+.goods_item
+  display: flex
+  background: #FFFFFF
+  border-radius: 25px
+  padding: 19px
+
+  .ladder
+    border-right: 4px dashed lightgray
+    padding-right: 37px
+
+.item_text
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding-left: 37px
+
+.item_btn
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  p
+    @include headerNumber
+
+  .btn_cash
+    width: 40px
+    height: 40px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 50px
+    background: #1BC52D
+    border-width: 0
+
+.dark
+  margin: 50px auto
+  background: #1D4354
+
+.callback
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 30px 40px
+  background: #1D4354
+  border-radius: 15px
+  margin-bottom: 100px
+
+  h2
+    color: white
+
+  p
+    color: white
+.delivery_block
+  padding: 56px
+  border: 3px solid #1BC52D
+  border-radius: 25px
+  margin-bottom: 60px
+.contacts
+  @include blockCenter
+.contacts_text
+  display: none
+.contacts_block
+  background: #FFFFFF
+  border-radius: 25px
+  padding: 35px 65px 35px 35px
+  margin-bottom: 80px
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.08)
+.form_input
+  padding: 10px 30px
+  background-color: transparent
+  border: 2px solid rgba(255, 255, 255, 0.5)
+  border-radius: 7px
+  outline: none
+  margin-right: 30px
+
+.form_btn
+  color: black
+  background: #FFFFFF
+  padding: 10px 30px
+  border: 2px solid #FFFFFF
+  border-radius: 7px
+
+.footer
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.info_text
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 20px
+
+  p
+    margin-left: 17px
+
+.info_copirait
+  text-align: end
+  font-weight: bold
+
+@media screen and (max-width: 600px)
+  body
+    padding: 20px
+  .burger
+    display: inline
+  .burger_text
+    a
+      display: flex
+  .header
+    border-bottom: 4px dashed lightgray
+  .header_block
+    width: 50%
+
+
+  .header_social
+    display: none
+
+  .nav
+    @include blockCenter
+    margin-top: 0
+    a
+      display: none
+
+  .main
+    display: flex
+    flex-direction: column-reverse
+    .arrow
+      right: 0
+  .list
+    overflow: hidden
+    grid-template-columns: repeat(4, 1fr)
+
+    .list_block
+      animation-name: strok
+      animation-duration: 12s
+      animation-direction: alternate
+      animation-iteration-count: infinite
+  .main_buy
+    width: 100%
+    align-items: flex-start
+  .main_list
+    flex-direction: column
+  .product_block
+    margin-bottom: 10px
+  .main_list :nth-child(1)
+    margin-right: 0
+  .item_text
+    width: 100%
+  .popular_goods
+    display: flex
+    flex-direction: column
+    justify-content: center
+  .contacts_text
+    display: block
+    text-align: center
+  .contacts
+    flex-direction: column
+  .callback
+    flex-direction: column
+    text-align: center
+    .callback_text
+      margin-bottom: 20px
+  .callback_form
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    input
+      width: 100%
+      margin-bottom: 10px
+  .footer
+    flex-direction: column
+  .info_text
+    flex-direction: column
+    p
+      margin-bottom: 17px
+    div
+      margin-bottom: 17px
+  .delivery_block
+    padding: 0
+    border: none
+@keyframes strok
+  from
+    transform: translateX(40%)
+  to
+    transform: translateX(-300%)
